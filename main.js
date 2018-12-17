@@ -1,6 +1,7 @@
 let express, app;
 express = require('express');
 app = express();
+const jsonParser = express.json();
 
 app.get('/', function (req, res) {
   res.send('Hello');
@@ -20,6 +21,12 @@ app.get('/', function (req, res) {
      }
    ));
  });
+ app.post("/serial", jsonParser, function (req, res) {
+    console.log(req.body);
+    if(!req.body) return response.sendStatus(400);
+    console.log(req.body);
+    response.json(`${req.body.serial}`);
+});
 app.get('/system', function (req, res) {
   res.send(JSON.stringify({
   "free_heap": 0,
@@ -139,7 +146,7 @@ app.get('/measures', function (req, res) {
 
 
 
-app.use(function(req, res){ 
+app.use(function(req, res){
  res.type('text/html');
  res.status(404);
  res.send("Запрос полная лажа");
