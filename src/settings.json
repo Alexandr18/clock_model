@@ -1,0 +1,67 @@
+{
+"name": "string",
+"mdns_enabled": true,
+"mdns_name": true,
+"wifi": {
+"mode": 0,
+"sta": {
+  "attempts": 0,
+  "attemtp_pause": 0,
+  "ap_list": [{
+    "ssid": "string",
+    "password": "string"
+  }]
+},
+"ap": {
+  "ssid": "string",
+  "password": "string"
+}
+},
+"time": {
+"update_interval": 0,
+"ntp_server": "string",
+"offset": 0,
+"daylight": true
+},
+"remote_server": {
+"address": "string",
+"port": 0,
+"password": "string"
+},
+"measures": {
+"temperature": {
+  "interval": 0,
+  "send_mode": 0,
+  "delta": 0,
+  "packet_size": 0
+},
+"humiduty": {
+  "interval": 0,
+  "send_mode": 0,
+  "delta": 0,
+  "packet_size": 0
+},
+"pressure": {
+  "interval": 0,
+  "send_mode": 0,
+  "delta": 0,
+  "packet_size": 0
+}
+},
+"api": {
+"enabled": true,
+"port": 0,
+"url": "string",
+"auth_type": 0,
+"login": "string",
+"password": "string"
+},
+"logging": {
+"mode": 0,
+"location": 0,
+"filename": "string",
+"split_mode": 0,
+"split_size": 0,
+"send_interval": 0
+}
+}

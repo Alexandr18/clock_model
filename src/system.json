@@ -1,0 +1,13 @@
+{
+"free_heap": 0,
+"free_programm_size": 0,
+"programm_md5": "string",
+"boot_mode": "string",
+"boot_version": "string",
+"chip_id": "string",
+"flash_chip_id": "string",
+"cpu_freq": 0,
+"core_version": "string",
+"reset_info": "string",
+"reset_reason": "string"
+}
