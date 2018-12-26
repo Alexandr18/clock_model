@@ -1,14 +1,14 @@
 let express, app;
 express = require('express');
 app = express();
-const jsonParser = express.json();
+
 
 app.get('/', function (req, res) {
   res.send('Hello');
  });
 
  app.get('/type', function (req, res) {
-   res.sendFile(__dirname + "/src/type.json");
+   res.sendFile(__dirname + `/src/type.json`);
  });
 
  app.get('/serial', function (req, res) {
@@ -36,13 +36,13 @@ app.get('/settings/wifi', function (req, res) {
 });
 
 app.get('/time', function (req, res) {
-  res.send(JSON.stringify({ "time": "2018-12-17"})); //
+
+  res.send(JSON.stringify({"time": "2018-12-17"})); //
 });
 
 app.get('/measures', function (req, res) {
   res.sendFile(__dirname + "/src/measures.json");
 });
-
 
 
 app.use(function(req, res){
