@@ -1,10 +1,22 @@
+const bodyParser = require("body-parser");
 let express, app;
 express = require('express');
 app = express();
 
+const urlencodedParser = bodyParser.urlencoded({extended: false});
 
 app.get('/', function (req, res) {
   res.sendFile(__dirname + "/site/index.html");
+ });
+
+ app.get('/sumbit', function (req, res) {
+   res.sendFile(__dirname + "/site/sumbit.html");
+  });
+
+ app.post('/register', urlencodedParser, function (request, response) {
+     if(!request.body) return response.sendStatus(400);
+     console.log(request.body);
+     response.send(`${request.body.userName} - ${request.body.userAge}`);
  });
 
  app.get('/type', function (req, res) {
